@@ -17,15 +17,19 @@ module.exports = {
         allowNull: true,
         default: null,
       },
-      precio: {
-        type: Sequelize.INTEGER,
+      caracteristicas: {
+        type: Sequelize.STRING,
         allowNull: true,
       },
       descuento: {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      caracteristicas: {
+      ambito: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      imagen: {
         type: Sequelize.STRING,
         allowNull: true,
       },
