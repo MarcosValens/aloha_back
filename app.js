@@ -4,6 +4,18 @@ const logger = require("morgan");
 const http = require("http");
 // Set up the express app
 const app = express();
+// Configurar cabeceras y cors
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
+  next();
+});
+
 // Log requests to the console.
 app.use(logger("dev"));
 // Parse incoming requests data (https://github.com/expressjs/body-parser)

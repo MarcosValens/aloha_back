@@ -13,7 +13,7 @@ module.exports = {
     return marca
       .findAll({
         where: {
-          id: req.params.id,
+          ambito: req.params.ambito,
         },
       })
       .then((marca) => res.status(200).send(marca))
