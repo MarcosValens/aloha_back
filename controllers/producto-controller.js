@@ -12,7 +12,7 @@ module.exports = {
     return producto
       .findAll({
         where: {
-          id: req.query.marca_id,
+          marca_id: req.query.marca_id,
         },
       })
       .then((producto) => res.status(200).send(producto))
