@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const producto = require("../models").producto;
+const producto = require("../models").product;
 const url = require("url");
 module.exports = {
   list(_, res) {
